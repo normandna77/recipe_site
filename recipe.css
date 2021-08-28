@@ -35,17 +35,17 @@ div.recipe {
     width: 100%;
 }
 
-
+/* for mobile since the condition for desktop is at the bottom */ 
 div.content {
     background-color: rgb(255, 255, 255);
     /*Horizontal : Vertical component */
-    margin: 60px 10% 80px 10% ;
-    padding: 0 30px 30px 30px;
-    min-width: 350px;
+    margin: 40px 8px 80px 8px ;
+    padding: 0 8px 20px 8px;
+    /*min-width: 350px;*/
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     overflow: visible;
-
 }
+
 
 h1 {
     text-align: center;
@@ -79,7 +79,7 @@ table.info {
     width:100% ; 
     color: white;
     background-color:#6C8290C0; 
-    height: 80px;
+    height: 50px;
 
 }
 /* all the td of the table that has a info class */ 
@@ -87,13 +87,14 @@ table.info {
 table.info td{
     text-align: center;
     vertical-align: top;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 table.info th{
     text-align: center;
     vertical-align: bottom;
     padding-bottom: 5px;
+    font-size: 14px;
 }
 
 img.info {
@@ -105,11 +106,19 @@ img.info {
 
 }
 
-div.col1, div.col2 {
-    width: 45%;
+/*div.col1, div.col2 {
+    width: 100%;
+    margin-top: 20px;
+
+}*/
+
+div.col {
+    width: 100%;
     margin-top: 20px;
 
 }
+
+
 
 div.col h2 {
     text-align: center;
@@ -121,13 +130,8 @@ div.col h2 {
 
 div.col1 {
     display: inline-block;
-    margin-right: 10%;
+    margin-bottom: 20px;
 
-}
-
-div.col2 {
-    float: right;
-    
 }
 
 div.ingredients { 
@@ -144,8 +148,6 @@ div.ingredients p{
 
 
 }
-
-
 
 table.instructions p.number { 
     background-color: #6C8290;
@@ -169,17 +171,66 @@ table.instructions tr {
     height: 40px
 }
 
-
 table.instructions td.instruction_set { 
     font-size: 14px;
     padding-left: 10px;
     padding-bottom: 10px;
 }
 
+/* for Desktop */
+@media only screen and (min-width: 768px) {
+    div.content {
+        margin: 60px 10% 80px 10% ;
+        padding: 0 30px 30px 30px;
+        min-width: 350px;
+
+    }
+
+    table.info {
+        height: 80px;
+    
+    }
+    
+    table.info td{
+        font-size: 14px;
+    }
+    
+    table.info th{
+        font-size: 16px;
+    }
+    /*
+    div.col1, div.col2 {
+        width: 45%;
+        margin-top: 20px;
+    
+    }*/
+
+    div.col {
+        width: 45%;
+    
+    }
+    
+    div.col1 {
+        margin-right: 10%;
+    
+    }
+    
+    div.col2 {
+        float: right;
+        
+    }
+}
+
+/* very large screen */
+@media only screen and (min-width: 900px) {
+    div.content {
+        margin-left: auto;
+        margin-right: auto;
+        width: 650px;
+
+    }
+}
+
 
 /* "*" applies to all */
-
-
-
-
 /* comment in CSS*/
